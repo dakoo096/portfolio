@@ -297,11 +297,26 @@ RESPONSIVE
     .itemSkills{
         width: 50%;
         margin: 0;
+    }    
+    .containerMisProyectos h2{
+        font-size:7vw;
     }
-    
-    .containerOrquideario article img:hover{
+    .containerOrquideario{
+        height: 100%;
+    }
+    .containerOrquideario article{
+        display: flex;
+        flex-direction: column;    
+        height: 100%;
+    }
+    .containerOrquideario article img{
+        display: flex;
+        flex-direction: column;
+        margin: 5px auto;
         width: 100%;
+        height: 20%;
     }
+
 }
 @media (max-width: 375px){
     .hero{
@@ -323,5 +338,11 @@ RESPONSIVE
     .containerAcercaDe p{
         font-size: 4vw;
     }
+    .containerOrquideario a{
+        font-size: 3.8vw;
+    }
+    .containerOrquideario article img:hover{
+            width: 100%;
 
-}
+        }
+    }
