@@ -12,7 +12,7 @@
 
 body{
 background: rgb(226,207,226);
-background: linear-gradient(0deg, rgba(226,207,226,0.5344827586206897) 35%, rgba(183,216,219,0.5172413793103448) 100%);
+background: linear-gradient(0deg, rgba(226,207,226,0.5344827586206897) 0%, rgba(183,216,219,0.5172413793103448) 100%);
 
 }
 .navbar {
