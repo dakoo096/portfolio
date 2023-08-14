@@ -11,9 +11,14 @@
 }
 
 body{
-background: rgb(169,229,233);
-background: linear-gradient(0deg, rgba(169,229,233,1) 0%, rgba(237,200,237,1) 100%);
+    background-color: #D9AFD9;
+    background-image: linear-gradient(180deg, #d9afd985 0%, #97dae17a 100%);
 
+}
+
+h2{
+    font-size:3vw;
+    transition: all 0.5s;
 }
 .navbar {
     padding: 0;
@@ -25,7 +30,7 @@ background: linear-gradient(0deg, rgba(169,229,233,1) 0%, rgba(237,200,237,1) 10
 .navbar-nav a {
     color: rgb(255, 255, 255);
     background-color: transparent;
-    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    transition: color 0.3s, background-color 0.3s;
     font-size: 1.5rem;
 } 
   /* Efecto de escala y color al pasar el mouse sobre los enlaces */
@@ -46,7 +51,7 @@ background: linear-gradient(0deg, rgba(169,229,233,1) 0%, rgba(237,200,237,1) 10
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 4px 4px rgba(0,0,0,0.2);
-    filter: opacity(90%);
+    filter: opacity(80%);
     
 }
 .hero-container{
@@ -106,10 +111,7 @@ ACERCA DE
 .containerAcercaDe:hover{
     box-shadow: 0 0 20px rgba(181, 109, 248, 0.658);
 }
-.containerAcercaDe h2{
-    font-size:3vw;
-    transition: all 0.5s;
-}
+
 .containerAcercaDe h2:hover{
     letter-spacing: 0.25rem;
     color: black;
@@ -131,10 +133,6 @@ MI STACK
     filter: opacity(.5);
     
 }
-.containerMiStack h2{
-    font-size:3vw;
-    transition: all 0.5s;
-}
 .containerMiStack h2:hover{
     letter-spacing: 0.25rem;
     color: black;
@@ -146,10 +144,6 @@ MIS SKILLS
 ------------------*/
 .containerMisProyectos{
     width: 90%;
-}
-.containerMisProyectos h2{
-    font-size: 3vw;
-    transition:all 0.5s;
 }
 .containerMisProyectos h2:hover{
     letter-spacing: 0.25rem;
@@ -272,6 +266,10 @@ RESPONSIVE
     }
 }
 @media (max-width: 576px){
+    h2{
+        font-size:7vw;
+    }
+
     .navbar-nav a{
         font-size: 1rem;
     }
@@ -285,9 +283,6 @@ RESPONSIVE
     .hero-container p{
         font-size: 3vw;
     }
-    .containerAcercaDe h2{
-        font-size:7vw;
-    }
     .containerAcercaDe p{
         font-size: 3.5vw;
     }
@@ -298,9 +293,7 @@ RESPONSIVE
         width: 50%;
         margin: 0;
     }    
-    .containerMisProyectos h2{
-        font-size:7vw;
-    }
+
     .containerOrquideario{
         height: 100%;
     }
@@ -319,6 +312,9 @@ RESPONSIVE
 
 }
 @media (max-width: 375px){
+    h2{
+        font-size:8vw;
+    }
     .hero{
         height:70vw ;       
     }
@@ -332,14 +328,15 @@ RESPONSIVE
     .hero-container p{
         font-size: 4vw;
     }
-    .containerAcercaDe h2{
-        font-size:8vw;
-    }
+
     .containerAcercaDe p{
         font-size: 4vw;
     }
     .containerOrquideario a{
         font-size: 3.8vw;
+    }
+    .containerOrquideario a{
+        
     }
     .containerOrquideario article img:hover{
             width: 100%;
