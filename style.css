@@ -11,8 +11,8 @@
 }
 
 body{
-    background: rgb(2,0,36);
-background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(226,207,226,0.5344827586206897) 35%, rgba(183,216,219,1) 100%);
+background: rgb(226,207,226);
+background: linear-gradient(0deg, rgba(226,207,226,0.5344827586206897) 35%, rgba(183,216,219,0.5172413793103448) 100%);
 
 }
 .navbar {
