@@ -10,13 +10,15 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
   </head>
+
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
@@ -41,8 +43,14 @@
               <a class="nav-link px-4" aria-current="page" href="#">Inicio</a>
               <a class="nav-link px-4" href="#acercaDeMi">Acerca de mi</a>
               <a class="nav-link px-4" href="#miStack">Stack</a>
-              <a class="nav-link px-4" href="#misProyectos">Mis proyectos</a>
+              <a class="nav-link px-4 me-2" href="#misProyectos">Mis proyectos</a>
             </div>
+            <button class="switch justify-content-between" id="switch">
+              <span><box-icon name="sun" color="#ffffff"></box-icon></span>
+              <span
+                ><box-icon name="moon" class="" type="solid" color="#ffffff"></box-icon
+              ></span>
+            </button>
           </div>
         </div>
       </nav>
@@ -50,24 +58,22 @@
         class="hero w-100 m-0 position-relative animate__animated animate__fadeInLeft"
       >
         <div
-          class="hero-container position-absolute top-50 start-50 translate-middle rounded text-center animate__animated animate__fadeInLeft animate__delay-1s"
+          class="hero-container position-absolute top-50 start-50 translate-middle text-center animate__animated animate__fadeInLeft animate__delay-1s"
         >
           <h1 class="titulo px-4 m-0">¡Hola! Soy Noelia Cabral</h1>
           <p class="p-2 justify-content-center m-0">Full Stack Web Developer</p>
         </div>
       </div>
     </header>
-     <!--BOTÓN BACK TO TOP-->
-     <section class="boton-back-to-top">
+    <!--BOTÓN BACK TO TOP-->
+    <section class="boton-back-to-top">
       <button
         onclick="topFunction()"
         id="myBtn"
         title="Go to top"
-        class="btn rounded align-items-center p-3 bg-gradient bg-opacity-75">
-        <box-icon
-          name="up-arrow-alt"
-          animation="tada"
-          flip="vertical"></box-icon>
+        class="btn rounded align-items-center p-3 bg-gradient bg-opacity-75"
+      >
+      <i class='bx bxs-up-arrow-alt bx-tada' ></i>
       </button>
     </section>
     <!--Acerca de mi-->
@@ -75,9 +81,7 @@
       class="acercaDeMi animate__animated animate__fadeInLeft animate__delay-2s"
       id="acercaDeMi"
     >
-      <div
-        class="containerAcercaDe p-4 text-center text-white"
-      >
+      <div class="containerAcercaDe p-4 text-center">
         <h2 class="titulo pb-3 m-0">Acerca de mi</h2>
         <p class="p-0 justify-content-center m-0">
           Me llamo Noelia, tengo 26 años y vivo en Córdoba, Argentina. Comencé a
@@ -91,7 +95,7 @@
     <!--Mi stack-->
     <section class="miStack mt-5" id="miStack">
       <div
-        class="containerMiStack p-3 text-center rounded-1 border mx-auto  animate__animated animate__delay-3s animate__slow animate__fadeIn"
+        class="containerMiStack p-3 text-center rounded-1 border mx-auto animate__animated animate__delay-3s animate__slow animate__fadeIn"
       >
         <h2 class="titulo d-flex justify-content-center p-2 m-0">Mis Skills</h2>
         <div
@@ -226,35 +230,64 @@
         </div>
       </div>
     </section>
-<!--Mis proyectos-->
+    <!--Mis proyectos-->
     <section class="misProyectos" id="misProyectos">
-      <div class="containerMisProyectos  p-3 text-center mx-auto  animate__animated animate__delay-3s animate__slow animate__fadeIn">
+      <div
+        class="containerMisProyectos p-3 text-center mx-auto animate__animated animate__delay-3s animate__slow animate__fadeIn"
+      >
         <h2 class="titulo px-4 m-0 p-3">Mis Proyectos</h2>
-        <div class="containerOrquideario p-3">        
-          <a href="https://orquideariocba.000webhostapp.com/index.html" style="--clr:#e876f73a" class="link-underline link-underline-opacity-0 "><span class="p-3">Orquideario Cordoba - Proyecto Propio</span></a>
+        <div class="containerOrquideario p-3">
+          <a
+            href="https://orquideariocba.000webhostapp.com/index.html"
+            style="--clr: #e876f73a"
+            class="link-underline link-underline-opacity-0"
+            ><span class="p-3">Orquideario Cordoba - Proyecto Propio</span></a
+          >
           <article class="d-flex mx-auto my-2 p-2">
-            <img src="img/inicioOrquideario.PNG">
-            <img src="img/acercaDeOrquideario.PNG">
-            <img src="img/formularioOrquideario.PNG">
-            <img src="img/productosOrquideario.PNG">
-          </article>    
-      </div>
+            <img src="img/inicioOrquideario.PNG" />
+            <img src="img/acercaDeOrquideario.PNG" />
+            <img src="img/formularioOrquideario.PNG" />
+            <img src="img/productosOrquideario.PNG" />
+          </article>
+        </div>
       </div>
     </section>
     <footer>
       <div class="row w-100">
         <div class="col-12 d-flex justify-content-center py-2">
-          <ul class="nav justify-content-center">        
+          <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link" href="https://www.linkedin.com/in/noelia-cabral-381723140/"><box-icon class="box-icon" type='logo'  name='linkedin-square' color='#ffffff'></box-icon></a>
+              <a
+                class="nav-link"
+                href="https://www.linkedin.com/in/noelia-cabral-381723140/"
+                ><box-icon
+                  class="box-icon"
+                  type="logo"
+                  name="linkedin-square"
+                  color="#ffffff"
+                ></box-icon
+              ></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/dakoo096"><box-icon name='github'class="box-icon"  type='logo' color='#ffffff'></box-icon></a>
+              <a class="nav-link" href="https://github.com/dakoo096"
+                ><box-icon
+                  name="github"
+                  class="box-icon"
+                  type="logo"
+                  color="#ffffff"
+                ></box-icon
+              ></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://wa.me/543512649353-"><box-icon type='logo' name='whatsapp' class="box-icon" color='#ffffff'></box-icon></a>
+              <a class="nav-link" href="https://wa.me/543512649353-"
+                ><box-icon
+                  type="logo"
+                  name="whatsapp"
+                  class="box-icon"
+                  color="#ffffff"
+                ></box-icon
+              ></a>
             </li>
-           
           </ul>
         </div>
         <span class="text-center text-white fs-5">Cabral Araceli - 2023</span>
