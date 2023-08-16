@@ -13,7 +13,7 @@ body {
 }
 body.dark {
   background: #3c3d3f;
-  transition: 0.5s ease all;
+  transition: 0.1s ease all;
 }
 
 h2 {
@@ -143,6 +143,10 @@ body.dark .hero .hero-container {
   transition: 0.5s ease all;
 }
 
+.hero-container:hover {
+  box-shadow: 0 0 20px rgba(181, 109, 248, 0.658);
+}
+
 .hero-container h1 {
   font-size: 5vw;
 }
@@ -195,11 +199,16 @@ ACERCA DE
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   padding: 5px;
-  transition: all 0.5s;
+  transition: 0.5s ease all;
 }
 body.dark .containerAcercaDe {
   background: rgba(86, 80, 99, 0.479);
-  background: linear-gradient(0deg, rgba(102, 61, 107, 0.432) 0%, rgba(63, 48, 114, 0.39) 100%);
+  background: linear-gradient(0deg, rgba(106, 82, 109, 0.432) 0%, rgba(90, 80, 122, 0.39) 100%);
+  border-radius: 0px 40px 40px 0px;
+  -moz-border-radius: 0px 40px 40px 0px;
+  -webkit-border-radius: 0px 40px 40px 0px;
+  margin-left: 0;
+  transition: 0.5s ease all;
 }
 body.dark .containerAcercaDe h2, body.dark .containerAcercaDe p {
   color: rgb(231, 228, 228);
@@ -222,6 +231,34 @@ body.dark .containerAcercaDe h2, body.dark .containerAcercaDe p {
 /*-----------------
 MI STACK
 ------------------*/
+.containerMiStack {
+  width: 80%;
+  margin: 4rem auto 0;
+  transition: 0.5s ease all;
+}
+body.dark .containerMiStack {
+  background: rgba(86, 80, 99, 0.479);
+  background: linear-gradient(0deg, rgba(106, 82, 109, 0.432) 0%, rgba(90, 80, 122, 0.39) 100%);
+  border-radius: 0px 0px 50px 50px;
+  -moz-border-radius: 0px 0px 50px 50px;
+  -webkit-border-radius: 0px 0px 50px 50px;
+}
+body.dark .containerMiStack:hover {
+  box-shadow: 0 0 20px rgba(181, 109, 248, 0.658);
+}
+body.dark .containerMiStack h2 {
+  color: white;
+}
+body.dark .containerMiStack .itemSkills {
+  background-color: #9b9a9a;
+}
+body.dark .containerMiStack .progress-bar {
+  background-color: #343d5b;
+}
+body.dark .containerMiStack .containerSkills img:hover {
+  filter: brightness(140%);
+}
+
 .containerSkills img {
   height: 12vw;
   transition: all 0.5s;
@@ -234,13 +271,39 @@ MI STACK
 .containerMiStack h2:hover {
   letter-spacing: 0.25rem;
   color: black;
+  text-shadow: 5px 5px 50px rgb(204, 198, 216);
 }
 
 /*-----------------
-MIS SKILLS
+MIS PROYECTOS
 ------------------*/
 .containerMisProyectos {
   width: 90%;
+  border-radius: 10px;
+  background: rgba(131, 105, 218, 0.452);
+  background: linear-gradient(0deg, rgba(121, 92, 216, 0.438) 0%, rgba(240, 150, 252, 0.349) 100%);
+  border-radius: 50px 50px 50px 50px;
+  -moz-border-radius: 50px 50px 50px 50px;
+  -webkit-border-radius: 50px 50px 50px 50px;
+}
+body.dark .containerMisProyectos {
+  background: rgba(86, 80, 99, 0.479);
+  background: linear-gradient(0deg, rgba(106, 82, 109, 0.432) 0%, rgba(90, 80, 122, 0.39) 100%);
+}
+body.dark .containerMisProyectos:hover {
+  box-shadow: 0 0 20px rgba(181, 109, 248, 0.658);
+}
+body.dark .containerMisProyectos h2 {
+  color: white;
+}
+body.dark .containerMisProyectos h2:hover {
+  text-shadow: 5px 5px 50px rgb(204, 198, 216);
+}
+body.dark .containerMisProyectos .containerOrquideario {
+  background-color: #7d7d7e;
+}
+body.dark .containerMisProyectos .containerOrquideario a:hover {
+  color: rgb(228, 227, 227);
 }
 
 .containerMisProyectos h2:hover {
@@ -249,9 +312,9 @@ MIS SKILLS
 }
 
 .containerOrquideario {
-  background: rgba(131, 105, 218, 0.452);
-  background: linear-gradient(0deg, rgba(121, 92, 216, 0.438) 0%, rgba(240, 150, 252, 0.349) 100%);
-  border-radius: 18px;
+  width: 75%;
+  border-radius: 30px 50px 50px 100px;
+  background-color: rgba(207, 239, 243, 0.5490196078);
   box-shadow: 0px 5px 10px 2px rgba(26, 28, 29, 0.368627451);
 }
 
@@ -326,13 +389,21 @@ footer {
   background-image: linear-gradient(180deg, rgba(64, 41, 119, 0.4588235294) 0%, rgba(164, 103, 248, 0.4784313725) 100%);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
+body.dark footer {
+  background: #343d5b;
+}
+footer .nav-link i:hover {
+  filter: none;
+  color: rgb(218, 214, 214);
+}
 
-.nav-link .box-icon {
+.nav-link i {
   color: #fff;
+  font-size: 2rem;
   transition: all 0.3s;
 }
 
-.nav-link box-icon:hover {
+.nav-link i:hover {
   filter: invert(100%);
   transform: scale(1.4);
 }
@@ -358,6 +429,9 @@ RESPONSIVE
   }
   .navbar-nav a:first-child {
     border-top: 1.5px solid hsla(0, 0%, 2%, 0.1);
+  }
+  .switch {
+    margin: 10px auto;
   }
 }
 @media (max-width: 576px) {
@@ -389,6 +463,9 @@ RESPONSIVE
   .containerOrquideario {
     height: 100%;
   }
+  .containerOrquideario a:hover {
+    letter-spacing: 0.15rem;
+  }
   .containerOrquideario article {
     display: flex;
     flex-direction: column;
@@ -400,6 +477,12 @@ RESPONSIVE
     margin: 5px auto;
     width: 100%;
     height: 20%;
+  }
+  .containerOrquideario article img:hover {
+    cursor: crosshair;
+    width: 100%;
+    opacity: 1;
+    filter: contrast(120%);
   }
 }
 @media (max-width: 375px) {
@@ -423,8 +506,5 @@ RESPONSIVE
   }
   .containerOrquideario a {
     font-size: 3.8vw;
-  }
-  .containerOrquideario article img:hover {
-    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
