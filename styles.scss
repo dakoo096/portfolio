@@ -89,6 +89,9 @@ NAVBAR
     
     body.dark &{
         background: #343d5b;
+        .navbar-toggler-icon{
+            filter: invert(100%);
+        }
         .navbar-nav a{
             color: #ebe7f0;
             &:hover{
@@ -149,7 +152,6 @@ PORTADA
     width: 75%;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px); /* Ajusta el valor para cambiar el grado de desenfoque */
     padding: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -212,6 +214,8 @@ ACERCA DE
     backdrop-filter: blur(10px);
     padding: 5px;
     transition: 0.5s ease all;
+    animation-name: slideOut;
+    animation-duration: 0.5s;
     body.dark &{
         background: rgba(86, 80, 99, 0.479);
     background: linear-gradient(0deg, rgba(106, 82, 109, 0.432) 0%,rgba(90, 80, 122, 0.39) 100%); 
@@ -220,6 +224,8 @@ ACERCA DE
 -webkit-border-radius: 0px 40px 40px 0px;
 margin-left: 0;
 transition: 0.5s ease all;
+animation-name: slideIn;
+animation-duration: 0.5s;
     h2, p{
         color: rgb(231, 228, 228);
     }
@@ -237,7 +243,27 @@ transition: 0.5s ease all;
     font-size: 1.5vw;
     text-align: justify;
 }
+@keyframes slideIn {
+    from {
+        margin-left: 7%;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+@keyframes slideOut {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: 10%;
+    }
+}
 
+
+.slideIn {
+    animation: slideIn 5s;
+}
 /*-----------------
 MI STACK
 ------------------*/
@@ -249,9 +275,9 @@ MI STACK
     body.dark &{
         background: rgba(86, 80, 99, 0.479);
         background: linear-gradient(0deg, rgba(106, 82, 109, 0.432) 0%,rgba(90, 80, 122, 0.39) 100%);
-        border-radius: 0px 0px 50px 50px;
-    -moz-border-radius: 0px 0px 50px 50px;
-    -webkit-border-radius: 0px 0px 50px 50px;
+        border-radius: 40px 70px 40px 70px;
+-webkit-border-radius: 40px 70px 40px 70px;
+-moz-border-radius: 40px 70px 40px 70px;
         &:hover{
             box-shadow: 0 0 20px rgba(181, 109, 248, 0.658);
         }
@@ -367,6 +393,7 @@ transition:  0.5s ease all;
     }
     
 }
+
 .containerOrquideario a span{
     position:relative;
     z-index:1;
@@ -403,7 +430,7 @@ footer{
     box-shadow:0 8px 32px 0 rgba(31,38,135,0.37);
     body.dark &{
         background: #343d5b;
-    }
+    
     .nav-link i:hover{
         filter: none;
         color: rgb(218, 214, 214);
@@ -416,9 +443,10 @@ footer{
 
 }
 .nav-link i:hover{
-    filter: invert(100%);
+    color: #000000;
     transform: scale(1.4);
 
+}
 }
 
 

@@ -77,6 +77,9 @@ NAVBAR
 body.dark .navbar {
   background: #343d5b;
 }
+body.dark .navbar .navbar-toggler-icon {
+  filter: invert(100%);
+}
 body.dark .navbar .navbar-nav a {
   color: #ebe7f0;
 }
@@ -135,8 +138,6 @@ body.dark .hero .hero-container {
   width: 75%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px); /* Ajusta el valor para cambiar el grado de desenfoque */
   padding: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -203,6 +204,8 @@ ACERCA DE
           backdrop-filter: blur(10px);
   padding: 5px;
   transition: 0.5s ease all;
+  animation-name: slideOut;
+  animation-duration: 0.5s;
 }
 body.dark .containerAcercaDe {
   background: rgba(86, 80, 99, 0.479);
@@ -212,6 +215,8 @@ body.dark .containerAcercaDe {
   -webkit-border-radius: 0px 40px 40px 0px;
   margin-left: 0;
   transition: 0.5s ease all;
+  animation-name: slideIn;
+  animation-duration: 0.5s;
 }
 body.dark .containerAcercaDe h2, body.dark .containerAcercaDe p {
   color: rgb(231, 228, 228);
@@ -231,6 +236,26 @@ body.dark .containerAcercaDe h2, body.dark .containerAcercaDe p {
   text-align: justify;
 }
 
+@keyframes slideIn {
+  from {
+    margin-left: 7%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes slideOut {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 10%;
+  }
+}
+.slideIn {
+  animation: slideIn 5s;
+}
+
 /*-----------------
 MI STACK
 ------------------*/
@@ -242,9 +267,9 @@ MI STACK
 body.dark .containerMiStack {
   background: rgba(86, 80, 99, 0.479);
   background: linear-gradient(0deg, rgba(106, 82, 109, 0.432) 0%, rgba(90, 80, 122, 0.39) 100%);
-  border-radius: 0px 0px 50px 50px;
-  -moz-border-radius: 0px 0px 50px 50px;
-  -webkit-border-radius: 0px 0px 50px 50px;
+  border-radius: 40px 70px 40px 70px;
+  -webkit-border-radius: 40px 70px 40px 70px;
+  -moz-border-radius: 40px 70px 40px 70px;
 }
 body.dark .containerMiStack:hover {
   box-shadow: 0 0 20px rgba(181, 109, 248, 0.658);
@@ -396,19 +421,17 @@ footer {
 body.dark footer {
   background: #343d5b;
 }
-footer .nav-link i:hover {
+body.dark footer .nav-link i:hover {
   filter: none;
   color: rgb(218, 214, 214);
 }
-
-.nav-link i {
+footer .nav-link i {
   color: #fff;
   font-size: 2rem;
   transition: all 0.3s;
 }
-
-.nav-link i:hover {
-  filter: invert(100%);
+footer .nav-link i:hover {
+  color: #000000;
   transform: scale(1.4);
 }
 
