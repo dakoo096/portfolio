@@ -16,6 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   </head>
 
@@ -78,7 +79,7 @@
     </section>
     <!--Acerca de mi-->
     <section
-      class="acercaDeMi animate__animated animate__fadeInLeft animate__delay-2s"
+      class="acercaDeMi" data-aos="zoom-in" data-aos-delay="300"
       id="acercaDeMi"
     >
       <div class="containerAcercaDe  p-4 text-center">
@@ -95,7 +96,7 @@
     <!--Mi stack-->
     <section class="miStack mt-5" id="miStack">
       <div
-        class="containerMiStack p-3 text-center animate__animated animate__delay-3s animate__slow animate__fadeIn"
+        class="containerMiStack p-3 text-center "data-aos="zoom-in"
       >
         <h2 class="titulo d-flex justify-content-center p-2 m-0">Mis Skills</h2>
         <div
@@ -234,7 +235,7 @@
     <!--Mis proyectos-->
     <section class="misProyectos my-5" id="misProyectos">
       <div
-        class="containerMisProyectos py-4 text-center mx-auto animate__animated animate__delay-3s animate__slow animate__fadeIn"
+        class="containerMisProyectos py-4 text-center mx-auto "data-aos="zoom-in"
       >
         <h2 class="titulo m-0 pb-3">Mis Proyectos</h2>
         <div class="containerOrquideario mx-auto my-2 p-3">
@@ -249,6 +250,14 @@
             <img src="img/acercaDeOrquideario.PNG" />
             <img src="img/formularioOrquideario.PNG" />
           </article>
+        </div>
+      </div>
+      <div class="overlay" id="overlay">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <div class="overlay-content">
+          <div class="overlay-prev" id="overlayPrev">&lt;</div>
+          <img src="" alt="Imagen de proyecto" class="overlay-img" id="overlayImg">
+          <div class="overlay-next" id="overlayNext">&gt;</div>
         </div>
       </div>
     </section>
@@ -281,6 +290,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

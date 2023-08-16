@@ -226,6 +226,7 @@ margin-left: 0;
 transition: 0.5s ease all;
 animation-name: slideIn;
 animation-duration: 0.5s;
+
     h2, p{
         color: rgb(231, 228, 228);
     }
@@ -324,6 +325,7 @@ MIS PROYECTOS
 -moz-border-radius: 50px 50px 50px 50px;
 -webkit-border-radius: 50px 50px 50px 50px;
 transition:  0.5s ease all;
+box-shadow: 0px 5px 10px 2px  #1a1c1d5e;
 
     body.dark &{
         background: rgba(86, 80, 99, 0.479);
@@ -376,19 +378,23 @@ transition:  0.5s ease all;
 
 .containerOrquideario a:active{
     border-radius: 50px;
-    animation: gradientChange 2s ease-in-out infinite;
+     animation: gradientChange  3s linear 1s infinite alternate;
     }
 @keyframes gradientChange {
-    0% {
+    0% {background: rgb(101,78,175);
+        background: linear-gradient(360deg, rgba(101,78,175,0.47) 0%, rgba(184,166,235,0.39) 100%);
 
     }
-    35% {
-        background-color: rgba(101, 78, 175, 0.479);
+    25% {
+        background: rgb(184,166,235);
+        background: linear-gradient(270deg, rgba(184,166,235,0.39) 0%, rgba(101,78,175,0.47) 100%);
     }
-    70% {
-        background-color: rgba(184, 166, 235, 0.39);
+    50% {
+        background: rgb(184,166,235);
+        background: linear-gradient(180deg, rgba(184,166,235,0.39) 0%, rgba(101,78,175,0.47) 100%);
     }
-    100% {
+    100% {background: rgb(184,166,235);
+        background: linear-gradient(90deg, rgba(184,166,235,0.39) 0%, rgba(101,78,175,0.47) 100%);
 
     }
     
@@ -410,16 +416,69 @@ transition:  0.5s ease all;
     transition: .5s ease;
 }
 .containerOrquideario article img:hover{
-    cursor: crosshair;
+    cursor: pointer;
     width: 300px;
     opacity: 1;
     filter: contrast(120%);
 }
-/* 
-hacer que al hacer clic en la imagen se abra un carrucel con fondo opaco
-.containerOrquideario article img::active{
-    transform: scale(3);
-}
+
+
+/* Overlay styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.658);
+    z-index: 1000;
+  }
+  
+  .overlay-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .overlay-img {
+    max-width: 100%;
+    max-height: 70%;
+    padding: 10px;
+  }
+  
+  .overlay-prev,
+  .overlay-next {
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 5px;
+    transition: 0.1s all;
+  }
+  .overlay-prev:hover,
+  .overlay-next:hover{
+    color: #e2e1e1;
+    transform: scale(1.1);
+    text-shadow: -2px 2px 10px #e5b9f0;
+  }
+  .overlay-prev:active,
+  .overlay-next:active{
+    color: #f0d6f5;
+    text-shadow: 2px 2px 10px #cf62eb;
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+  }
+  .close-btn:hover{
+    color: rgb(221, 217, 217);
+  }
 
 /*-----------
 FOOTER
@@ -527,11 +586,15 @@ RESPONSIVE
         height: 20%;
     }
     .containerOrquideario article img:hover{
-        cursor: crosshair;
         width: 100%;
         opacity: 1;
         filter: contrast(120%);
     }
+    .overlay-img {
+        max-width: 80%;
+        max-height: 70%;
+        padding: 5px;
+      }
 }
 @media (max-width: 375px){
     h2{
