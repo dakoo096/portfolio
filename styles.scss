@@ -183,6 +183,9 @@ BACK TO TOP
     background-color: #dbbddba1;
     body.dark &{
         background-color: #695a69a1;
+        &:hover{
+            background-color: #88898f;
+        }
         i{
             color: white;
         }
@@ -294,6 +297,7 @@ MIS PROYECTOS
     border-radius: 50px 50px 50px 50px;
 -moz-border-radius: 50px 50px 50px 50px;
 -webkit-border-radius: 50px 50px 50px 50px;
+transition:  0.5s ease all;
 
     body.dark &{
         background: rgba(86, 80, 99, 0.479);
@@ -416,6 +420,8 @@ footer{
     transform: scale(1.4);
 
 }
+
+
 /*-----------
 RESPONSIVE
 -----------*/
