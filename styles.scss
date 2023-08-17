@@ -359,45 +359,39 @@ box-shadow: 0px 5px 10px 2px  #1a1c1d5e;
 }
 
 .containerOrquideario a{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     position:relative;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-weight: 400;
-    transition: 0.5s;
+    transition: 0.5s ease all;
 
 }
 .containerOrquideario a:hover { 
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.15rem;
     background: var(--clr);
     color: black;
     box-shadow:0 0 35px (--clr) ;
+    border-radius: 50px;
 }
 
 .containerOrquideario a:active{
     border-radius: 50px;
-     animation: gradientChange  3s linear 1s infinite alternate;
+     animation: gradientChange  1s linear infinite alternate;
+     transition: 0.5s ease all;
     }
 @keyframes gradientChange {
-    0% {background: rgb(101,78,175);
-        background: linear-gradient(360deg, rgba(101,78,175,0.47) 0%, rgba(184,166,235,0.39) 100%);
+    0% {background: var(--clr);
 
-    }
-    25% {
-        background: rgb(184,166,235);
-        background: linear-gradient(270deg, rgba(184,166,235,0.39) 0%, rgba(101,78,175,0.47) 100%);
     }
     50% {
         background: rgb(184,166,235);
-        background: linear-gradient(180deg, rgba(184,166,235,0.39) 0%, rgba(101,78,175,0.47) 100%);
     }
-    100% {background: rgb(184,166,235);
-        background: linear-gradient(90deg, rgba(184,166,235,0.39) 0%, rgba(101,78,175,0.47) 100%);
+    100% {background: rgb(153, 134, 211);
 
     }
-    
 }
 
 .containerOrquideario a span{
@@ -433,6 +427,7 @@ box-shadow: 0px 5px 10px 2px  #1a1c1d5e;
     justify-content: center;
     background: rgba(0, 0, 0, 0.658);
     z-index: 1000;
+    
   }
   
   .overlay-content {
@@ -467,6 +462,7 @@ box-shadow: 0px 5px 10px 2px  #1a1c1d5e;
   .overlay-next:active{
     color: #f0d6f5;
     text-shadow: 2px 2px 10px #cf62eb;
+    
   }
   .close-btn {
     position: absolute;
@@ -526,6 +522,10 @@ RESPONSIVE
     }
 }
 @media (max-width: 992px){
+    h2{
+        font-size:4vw;
+    }
+    
     .navbar-nav a{
         border-bottom: 1.5px solid hsla(0, 0%, 2%, 0.100);
         text-align: center;
@@ -533,6 +533,9 @@ RESPONSIVE
     .navbar-nav a:first-child{
         border-top: 1.5px solid hsla(0, 0%, 2%, 0.100);
 
+    }
+    .containerAcercaDe p{
+        font-size: 1.9vw;
     }
     .switch{
         margin: 10px auto;
@@ -620,7 +623,7 @@ RESPONSIVE
     .containerOrquideario a{
         font-size: 3.8vw;
     }
-    .containerOrquideario a{
-        
+    .containerSkills .itemSkills{
+        width: 90%;
     }
     }
